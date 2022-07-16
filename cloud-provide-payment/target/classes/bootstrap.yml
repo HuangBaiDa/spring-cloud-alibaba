@@ -1,4 +1,8 @@
-server.port=8001
-spring.application.name=cloud-provide-payment
-spring.profiles.active=dev
+server:
+  port: 8001
+spring:
+  application:
+    name: cloud-provide-payment
+  profiles:
+    active: dev
 #-Dspring.profiles.active=dev
