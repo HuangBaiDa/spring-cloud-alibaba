@@ -6,3 +6,9 @@ spring:
   profiles:
     active: dev
 #-Dspring.profiles.active=dev
+  cloud:
+    nacos:
+      config:
+        file-extension: properties
+        server-addr: 150.158.154.32:8848
+        namespace: 65ae4f00-7155-4c91-b18e-f4ef740f0f40

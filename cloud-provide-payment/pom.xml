@@ -69,9 +69,16 @@
         <scope>test</scope>
     </dependency>
 
+    <!--   nacos配置中心     -->
     <dependency>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+    </dependency>
+
+    <!--   nacos服务发现     -->
+    <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
     </dependency>
 
 <!--        配合yaml生效，具体版本另找了，用上面的Nacos页可以-->

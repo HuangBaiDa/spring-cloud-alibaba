@@ -17,20 +17,30 @@
             <groupId>com.koolean</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
+            <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>com.koolean</groupId>
-            <artifactId>cloud-provide-payment</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+
+        <!--    依赖jar要单独打Facade包，或者传统的client也可以    -->
+<!--        <dependency>-->
+<!--            <groupId>com.koolean</groupId>-->
+<!--            <artifactId>cloud-provide-payment</artifactId>-->
+<!--            <version>${project.version}</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -38,10 +48,15 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
     </dependencies>
 

@@ -18,26 +18,31 @@ public class OrderController {
      */
     public static final String PAYMENT_URL = "http://localhost:8001";
 
+    /**
+     * 以服务名的方式访问
+     */
+    public static final  String PAYMENT_URL2 = "http://cloud-provide-payment";
+
     @Autowired
     private RestTemplate restTemplate;
 
-    /**
-     * 创建支付订单的接口
-     * @param payment
-     * @return
-     */
-    @GetMapping("/consumer/payment/create")
-    public CommonResult<Payment> create(Payment payment) {
-        return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);
-    }
-
-    /**
-     * 根据id获取支付订单
-     * @param id
-     * @return
-     */
-    @GetMapping("/consumer/payment/get/{id}")
-    public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
-        return restTemplate.getForObject(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
-    }
+//    /**
+//     * 创建支付订单的接口
+//     * @param payment
+//     * @return
+//     */
+//    @GetMapping("/consumer/payment/create")
+//    public CommonResult<Payment> create(Payment payment) {
+//        return restTemplate.postForObject(PAYMENT_URL2 + "/payment/create", payment, CommonResult.class);
+//    }
+//
+//    /**
+//     * 根据id获取支付订单
+//     * @param id
+//     * @return
+//     */
+//    @GetMapping("/consumer/payment/get/{id}")
+//    public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
+//        return restTemplate.getForObject(PAYMENT_URL2 + "/payment/get/" + id, CommonResult.class);
+//    }
 }
