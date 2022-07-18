@@ -1,8 +1,8 @@
 package com.koolean.controller;
 
 import com.koolean.common.pojo.CommonResult;
-import com.koolean.common.pojo.Payment;
-import com.koolean.service.PaymentService;
+import com.koolean.payment.request.Payment;
+import com.koolean.payment.facade.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

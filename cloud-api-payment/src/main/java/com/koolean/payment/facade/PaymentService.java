@@ -1,7 +1,6 @@
-package com.koolean.service;
+package com.koolean.payment.facade;
 
-import com.koolean.common.pojo.Payment;
-import org.apache.ibatis.annotations.Param;
+import com.koolean.payment.request.Payment;
 
 /**
  * @author jiwu
@@ -21,6 +20,6 @@ public interface PaymentService {
      * @param id
      * @return
      */
-    Payment queryById(@Param("id") long id);
+    Payment queryById(long id);
 }
 

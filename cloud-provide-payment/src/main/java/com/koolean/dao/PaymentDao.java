@@ -1,6 +1,6 @@
 package com.koolean.dao;
 
-import com.koolean.common.pojo.Payment;
+import com.koolean.payment.request.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;

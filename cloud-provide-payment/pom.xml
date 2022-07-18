@@ -24,6 +24,11 @@
         <artifactId>cloud-api-commons</artifactId>
         <version>${project.version}</version>
     </dependency>
+    <dependency>
+        <groupId>com.koolean</groupId>
+        <artifactId>cloud-api-payment</artifactId>
+        <version>${project.version}</version>
+    </dependency>
 
     <dependency>
         <groupId>org.springframework.boot</groupId>

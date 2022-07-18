@@ -1,8 +1,8 @@
 package com.koolean.service.impl;
 
-import com.koolean.common.pojo.Payment;
+import com.koolean.payment.request.Payment;
 import com.koolean.dao.PaymentDao;
-import com.koolean.service.PaymentService;
+import com.koolean.payment.facade.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

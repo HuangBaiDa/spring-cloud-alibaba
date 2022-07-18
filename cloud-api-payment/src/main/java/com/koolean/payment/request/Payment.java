@@ -1,4 +1,4 @@
-package com.koolean.common.pojo;
+package com.koolean.payment.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
