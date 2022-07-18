@@ -11,6 +11,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
  * @author jiwu
  * @date 2022/07/15 16:20
  **/
+//@DubboComponentScan
 @RefreshScope
 @EnableDiscoveryClient
 @SpringBootApplication(scanBasePackages = "com.koolean")

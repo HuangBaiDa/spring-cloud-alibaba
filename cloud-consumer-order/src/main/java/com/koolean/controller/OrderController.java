@@ -2,8 +2,10 @@ package com.koolean.controller;
 
 
 import com.koolean.common.pojo.CommonResult;
+import com.koolean.payment.facade.HelloService;
 import com.koolean.payment.request.Payment;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +15,10 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @Slf4j
 public class OrderController {
+
+    @DubboReference
+    HelloService helloService;
+
     /**
      * 调用支付订单服务端的ip+端口号
      */
@@ -44,5 +50,10 @@ public class OrderController {
     @GetMapping("/consumer/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
         return restTemplate.getForObject(PAYMENT_URL2 + "/payment/get/" + id, CommonResult.class);
+    }
+
+    @GetMapping("/test")
+    public String test() {
+        return helloService.hello("dogchildrenhumble.com");
     }
 }
