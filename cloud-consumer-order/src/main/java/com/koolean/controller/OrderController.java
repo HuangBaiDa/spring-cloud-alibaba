@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @Slf4j
 public class OrderController {
 
-    @DubboReference
+    @DubboReference(version="1.0.0")
     HelloService helloService;
 
     /**

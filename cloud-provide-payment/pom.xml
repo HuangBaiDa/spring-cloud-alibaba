@@ -93,6 +93,10 @@
         <artifactId>spring-cloud-starter-dubbo</artifactId>
     </dependency>
 
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+    </dependency>
 <!--        配合yaml生效，具体版本另找了，用上面的Nacos页可以-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.cloud</groupId>-->

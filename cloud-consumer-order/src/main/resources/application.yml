@@ -9,6 +9,10 @@ dubbo:
     name: dubbo
     port: -1
   registry:
-    address: spring-cloud://150.158.154.32:8848
+    #address: spring-cloud://150.158.154.32:8848
+    address: nacos://150.158.154.32:8848
+    check: false #关闭注册中心是否启动的相关检查,false表示不检查注册中心是否启动，就不会报错
   cloud:
     subscribed-services: cloud-provide-payment  #表示要订阅服务的服务名，可以配置'*'代表订阅所有服务（不推荐使用）。若需订阅多应用，使用","分割。
+  consumer:
+    check: false  #关闭订阅服务是否启动的检查【检查时，没有服务提供者会报错】
