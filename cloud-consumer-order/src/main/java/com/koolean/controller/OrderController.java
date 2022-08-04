@@ -3,7 +3,9 @@ package com.koolean.controller;
 
 import com.koolean.common.pojo.CommonResult;
 import com.koolean.payment.facade.HelloService;
+import com.koolean.payment.facade.UserService;
 import com.koolean.payment.request.Payment;
+import com.koolean.payment.request.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,9 @@ public class OrderController {
 
     @DubboReference(version="1.0.0")
     HelloService helloService;
+
+    @DubboReference(version="1.0.0")
+    UserService userService;
 
     /**
      * 调用支付订单服务端的ip+端口号
@@ -55,5 +60,11 @@ public class OrderController {
     @GetMapping("/test")
     public String test() {
         return helloService.hello("dogchildrenhumble.com");
+    }
+
+    @GetMapping("/getUser")
+    public User create(int id) {
+
+        return userService.queryUser(id);
     }
 }
